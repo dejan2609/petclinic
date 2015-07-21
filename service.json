@@ -1,0 +1,22 @@
+{
+   "kind":"Service",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"petclinic",
+      "labels":{
+         "app":"petclinic"
+      }
+   },
+   "spec":{
+      "ports": [
+         {
+           "port":8000,
+           "targetPort":"http-server"
+         }
+      ],
+      "selector":{
+         "app":"petclinic"
+      },
+      "type": "LoadBalancer"
+   }
+}
