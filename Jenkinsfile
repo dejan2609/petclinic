@@ -18,7 +18,7 @@ node {
     }
 
     stage 'Run app on Kubernetes'
-    withKubernetes( serverUrl: 'https://146.148.36.159', credentialsId: 'kubeadmin' ) {
+    wrap([$class: 'KubectlBuildWrapper', serverUrl: 'https://146.148.36.159', credentialsId: 'kubeadmin' ) {
           sh 'kubectl run petclinic --image=gcr.io/nicolas-deloof/petclinic --port=8080'
     }
 
