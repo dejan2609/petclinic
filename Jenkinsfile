@@ -1,4 +1,4 @@
-node {
+node('google') {
     
     stage 'Checkout'
     git "https://github.com/kohsuke/petclinic.git"
