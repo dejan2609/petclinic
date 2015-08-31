@@ -1,3 +1,3 @@
-FROM tfennelly/tomcat7
+FROM ndeloof/base
 
-ADD target/petclinic.war /tomcat7/webapps/petclinic.war
+ADD target/petclinic.war /usr/local/tomcat/webapps/petclinic.war
